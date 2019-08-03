@@ -1,0 +1,40 @@
+{
+  "medicines": [{
+      "id":0,
+      "name": "paracetamol",
+      "manufacturer": "johnson &johnson",
+      "batchNo": "234566",
+      "expirationDt": "22/012021",
+      "price": "20",
+      "type": "Table"
+  },
+    {
+      "id":1,
+      "name": "crocin",
+      "manufacturer": "ranbaxy",
+      "batchNo": "87654",
+      "expirationDt": "1208/2021",
+      "price": "3",
+      "type": "Capsule"
+    },
+    {
+      "id":2,
+      "name": "cold act",
+      "manufacturer": "johnson & johnson",
+      "batchNo": "34242",
+      "expirationDt": "04/02/2021",
+      "price": "55",
+      "type": "Gel"
+    },
+    {
+      "id":3,
+      "name": "brufen",
+      "manufacturer": "wipro",
+      "batchNo": "4534",
+      "expirationDt": "17/09/2021",
+      "price": "7",
+      "type": "Syrup"
+    }
+  ]
+
+}
