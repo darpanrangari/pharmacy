@@ -1,0 +1,44 @@
+doctype
+html
+    head
+        title
+        link(href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css', rel='stylesheet')
+        script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js')
+        script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js')
+    body
+        .container
+            .row
+                h1 My Pharmacy Medicines
+                form(id='form', action='/pharmacy/delete', method='POST')
+                    table(class='table table-striped')
+                        thead
+                            tr
+                                th #ID
+                                th #Name
+                                th #Manufacturer
+                                th #batchNo
+                                th #expirationDt
+                                th #price
+                                th #type
+                                th #Select to delete
+                                th #Edit
+                        tbody
+                            each item,index in medicines
+                                tr
+                                    td  #{index}
+                                    td  #{item.name}
+                                    td  #{item.manufacturer}
+                                    td  #{item.batchNo}
+                                    td  #{item.expirationDt}
+                                    td  #{item.price}
+                                    td  #{item.type}
+                                    td
+                                        input(id='id', type='checkbox', name='id',value='#{item.id}')
+                                    td
+                                        a(href='/pharmacy/edit/#{item.id}' class='glyphicon glyphicon-pencil')
+                    .row
+                        .col-md-2
+                            button(class='btn btn-success')
+                                a(href='/pharmacy/create') Add new
+                        .col-md-2
+                            input(type='submit', value='Delete',class='btn btn-danger')
