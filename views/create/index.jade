@@ -1,0 +1,37 @@
+octype
+html
+    head
+        title
+        link(href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css', rel='stylesheet')
+        script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js')
+        script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js')
+    body
+        .container
+            .row
+                .col-md-6
+                    h1 Add New Medicine
+                    form(id='form', action='/pharmacy/create', method='POST')
+                        .form-group
+                            label(for='name') #Name
+                                input(id='name', name='name', placeholder='Name',class='form-control')
+                        .form-group
+                            label(for='manufacturer') #Manufacturer
+                                input(id='manufacturer', name='manufacturer', placeholder='Manufacturer',class='form-control')
+                        .form-group
+                            label(for='batchNo') #Batch No
+                                input(id='batchNo', name='batchNo', placeholder='Batch No',class='form-control')
+                        .form-group
+                            label(for='expirationDt') #Expiration Date
+                                input(id='expirationDt', name='expirationDt', placeholder='Expiration Date',class='form-control')
+                        .form-group
+                            label(for='price') #Price
+                                input(id='price', name='price', placeholder='Price',class='form-control')
+                        .form-group
+                            label(for='type') #Type
+                                select(id='type', name='type', placeholder='Type',class='form-control')
+                                    option() Please select
+                                    option() Capsule
+                                    option() Tablet
+                                    option() Syrup
+                                    option() Gel
+                        input(type='submit', value='Add Medicine',class='btn btn-success')
